@@ -16,4 +16,12 @@ class Tamagotchi
     self.sleep_level = self.sleep_level - 1
     self.play_level = self.play_level - 1
   end
+
+  def feed
+    self.food_level = self.food_level + 1
+  end
+
+  def sleep
+    self.sleep_level = 10
+  end
 end

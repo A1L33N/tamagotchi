@@ -33,4 +33,19 @@ describe Tamagotchi do
       expect(@my_pet.play_level).to eq 9
     end
   end
+
+  describe '#feed' do
+    it "increases food level by 1" do
+      @my_pet.feed
+      expect(@my_pet.food_level).to eq 11
+    end
+  end
+
+  describe '#sleep' do
+    it 'resets sleep_level to 10' do
+      @my_pet.time_passes
+      @my_pet.sleep
+      expect(@my_pet.sleep_level).to eq 10
+    end
+  end
 end
