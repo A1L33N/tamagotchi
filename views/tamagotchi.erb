@@ -1,0 +1,13 @@
+<h1><%= @pet.name %></h1>
+
+<h2><%= @pet.name %> is <%= @pet.emotion %></h2>
+
+<ul>
+  <li>Hungry level: <%=@pet.food_level %></li>
+  <li>Energy level: <%=@pet.sleep_level %></li>
+  <li>Play level: <%=@pet.play_level %></li>
+
+</ul>
+<form  action="/feed">
+  <button type='submit'>Feed</button>
+</form>

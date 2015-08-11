@@ -1,10 +1,23 @@
 class Tamagotchi
   attr_accessor :name, :sleep_level, :food_level, :play_level
+  @@pets =[]
   def initialize(name)
     @name = name
     @sleep_level = 10
     @food_level = 10
     @play_level = 10
+  end
+
+  def self.clear
+    @@pets = []
+  end
+
+  def self.retrieve_pet
+    @@pets[0]
+  end
+
+  def save
+    @@pets.push(self)
   end
 
   def is_alive?

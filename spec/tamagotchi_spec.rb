@@ -4,6 +4,7 @@ require 'pry'
 
 describe Tamagotchi do
   before do
+    Tamagotchi.clear
     @my_pet = Tamagotchi.new('Gator')
   end
   describe "#initialize" do
@@ -77,14 +78,19 @@ describe Tamagotchi do
     end
    end
 
-   describe "#wake_up" do
-     it 'starts call time_passes method at set interval' do
-       @my_pet.wake_up
-       expect(@my_pet.emotion).to eq 'content'
-       @my_pet.wake_up
-       expect(@my_pet.emotion).to eq 'grouchy'
-
+  #  describe "#wake_up" do
+  #    it 'starts call time_passes method at set interval' do
+  #      @my_pet.wake_up
+  #      expect(@my_pet.emotion).to eq 'content'
+  #      @my_pet.wake_up
+  #      expect(@my_pet.emotion).to eq 'grouchy'
+   #
+  #    end
+    #end
+     describe "#save" do
+       it 'pushes it self into an array' do
+         expect(@my_pet.save).to eq [@my_pet]
+       end
      end
-   end
 
 end
