@@ -48,4 +48,11 @@ describe Tamagotchi do
       expect(@my_pet.sleep_level).to eq 10
     end
   end
+
+  describe "#play" do
+    it "increases the play level by 1" do
+      @my_pet.play
+      expect(@my_pet.play_level).to eq 11
+    end
+  end
 end

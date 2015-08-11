@@ -24,4 +24,8 @@ class Tamagotchi
   def sleep
     self.sleep_level = 10
   end
+
+  def play
+    self.play_level = self.play_level + 1
+  end
 end
