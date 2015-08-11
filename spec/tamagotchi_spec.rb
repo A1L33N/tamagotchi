@@ -24,4 +24,13 @@ describe Tamagotchi do
       expect(@my_pet.is_alive?).to eq false
     end
   end
+
+  describe '#time_passes' do
+    it 'decreases all levels of tamagotchi' do
+      @my_pet.time_passes
+      expect(@my_pet.food_level).to eq 9
+      expect(@my_pet.sleep_level).to eq 9
+      expect(@my_pet.play_level).to eq 9
+    end
+  end
 end

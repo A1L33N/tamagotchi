@@ -8,6 +8,12 @@ class Tamagotchi
   end
 
   def is_alive?
-    @food_level > 0
+    self.food_level > 0
+  end
+
+  def time_passes
+    self.food_level = self.food_level - 1
+    self.sleep_level = self.sleep_level - 1
+    self.play_level = self.play_level - 1
   end
 end
