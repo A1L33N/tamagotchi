@@ -1,5 +1,6 @@
 require 'rspec'
 require './lib/tamagotchi'
+require 'pry'
 
 describe Tamagotchi do
   before do
@@ -61,4 +62,15 @@ describe Tamagotchi do
       expect(@my_pet.status).to eq "Food level: 10, sleep level: 10, and play level: 10"
     end
   end
+
+  describe '#emotion' do
+    it "returns it's emotions based on status levels" do
+      expect(@my_pet.emotion).to eq 'happy'
+      @my_pet.time_passes
+      expect(@my_pet.emotion).to eq 'content'
+      @my_pet.time_passes
+      expect(@my_pet.emotion).to eq 'grouchy'
+
+    end
+   end
 end

@@ -32,4 +32,15 @@ class Tamagotchi
   def status
     "Food level: #{self.food_level}, sleep level: #{self.sleep_level}, and play level: #{self.play_level}"
   end
+
+  def emotion
+    if (self.sleep_level + self.play_level + self.food_level) >= 30
+      "happy"
+
+    elsif (self.sleep_level + self.play_level + self.food_level) >= 27
+      "content"
+    else
+      "grouchy"
+    end
+  end
 end
