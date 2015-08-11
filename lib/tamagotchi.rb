@@ -6,4 +6,8 @@ class Tamagotchi
     @food_level = 10
     @play_level = 10
   end
+
+  def is_alive?
+    @food_level > 0
+  end
 end
