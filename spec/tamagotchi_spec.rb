@@ -42,10 +42,10 @@ describe Tamagotchi do
     end
   end
 
-  describe '#sleep' do
+  describe '#asleep' do
     it 'resets sleep_level to 10' do
       @my_pet.time_passes
-      @my_pet.sleep
+      @my_pet.asleep
       expect(@my_pet.sleep_level).to eq 10
     end
   end
@@ -69,8 +69,22 @@ describe Tamagotchi do
       @my_pet.time_passes
       expect(@my_pet.emotion).to eq 'content'
       @my_pet.time_passes
+      @my_pet.time_passes
+      @my_pet.time_passes
+      @my_pet.time_passes
       expect(@my_pet.emotion).to eq 'grouchy'
 
     end
    end
+
+   describe "#wake_up" do
+     it 'starts call time_passes method at set interval' do
+       @my_pet.wake_up
+       expect(@my_pet.emotion).to eq 'content'
+       @my_pet.wake_up
+       expect(@my_pet.emotion).to eq 'grouchy'
+
+     end
+   end
+
 end
