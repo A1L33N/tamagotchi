@@ -10,13 +10,13 @@ end
 get '/feed' do
   @pet = Tamagotchi.retrieve_pet
   @pet.feed
-  erb :tamagotchi
+  redirect '/tamagotchi'
 end
 
 get '/play' do
   @pet = Tamagotchi.retrieve_pet
   @pet.play
-  erb :tamagotchi
+  redirect '/tamagotchi'
 end
 
 post '/tamagotchi' do
@@ -29,7 +29,7 @@ end
 get '/sleep' do
   @pet = Tamagotchi.retrieve_pet
   @pet.asleep
-  erb :tamagotchi
+  redirect '/tamagotchi'
 end
 
 get '/tamagotchi' do
