@@ -55,4 +55,10 @@ describe Tamagotchi do
       expect(@my_pet.play_level).to eq 11
     end
   end
+
+  describe "#status" do
+    it "returns all levels" do
+      expect(@my_pet.status).to eq "Food level: 10, sleep level: 10, and play level: 10"
+    end
+  end
 end

@@ -28,4 +28,8 @@ class Tamagotchi
   def play
     self.play_level = self.play_level + 1
   end
+
+  def status
+    "Food level: #{self.food_level}, sleep level: #{self.sleep_level}, and play level: #{self.play_level}"
+  end
 end
